@@ -12,6 +12,9 @@ const RootStack = createStackNavigator({
     TestScreen: {
         screen: TestScreen,
     }
+},
+{
+    initialRouteName: 'Home',
 });
 
 export default createAppContainer(RootStack);
