@@ -2,19 +2,23 @@ import {
     createAppContainer,
 } from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
-import Home from '@Screens/Home';
-import TestScreen from '@Screens/TestScreen';
+import HomeScreen from '@Screens/HomeScreen';
+import RecipeScreen from '@Screens/RecipeScreen';
 
 const RootStack = createStackNavigator({
-    Home: {
-        screen: Home,
+    HomeScreen: {
+        screen: HomeScreen,
+        navigationOptions: {
+            headerShown: false,
+        }
     },
-    TestScreen: {
-        screen: TestScreen,
+    RecipeScreen: {
+        screen: RecipeScreen,
     }
 },
 {
-    initialRouteName: 'Home',
+    // initialRouteName: 'RecipeScreen',
+    initialRouteName: 'HomeScreen',
 });
 
 export default createAppContainer(RootStack);
